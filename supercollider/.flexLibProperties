@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<flexLibProperties version="1">
+  <includeClasses>
+    <classEntry path="com.relivethefuture.supercollider.Server"/>
+    <classEntry path="com.relivethefuture.supercollider.control.AddActions"/>
+    <classEntry path="com.relivethefuture.supercollider.data.Group"/>
+    <classEntry path="com.relivethefuture.supercollider.data.GroupTree"/>
+    <classEntry path="com.relivethefuture.supercollider.data.Node"/>
+    <classEntry path="com.relivethefuture.supercollider.data.ServerStatus"/>
+    <classEntry path="com.relivethefuture.supercollider.data.Synth"/>
+    <classEntry path="com.relivethefuture.supercollider.data.UGen"/>
+    <classEntry path="com.relivethefuture.supercollider.data.UGenLibrary"/>
+    <classEntry path="com.relivethefuture.supercollider.events.SCEvent"/>
+    <classEntry path="com.relivethefuture.supercollider.examples.SuperColliderServerCheck"/>
+  </includeClasses>
+  <includeResources>
+    <resourceEntry destPath="ugens.xml" sourcePath="ugens.xml"/>
+  </includeResources>
+  <namespaceManifests/>
+</flexLibProperties>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<flexLibProperties includeAllClasses="false" version="1">
+  <includeClasses>
+    <classEntry path="com.relivethefuture.osc.core.IMessageListener"/>
+    <classEntry path="com.relivethefuture.osc.core.IOscListener"/>
+    <classEntry path="com.relivethefuture.osc.core.OscBundle"/>
+    <classEntry path="com.relivethefuture.osc.core.OscClient"/>
+    <classEntry path="com.relivethefuture.osc.core.OscDecoder"/>
+    <classEntry path="com.relivethefuture.osc.core.OscDispatcher"/>
+    <classEntry path="com.relivethefuture.osc.core.OscEncoder"/>
+    <classEntry path="com.relivethefuture.osc.core.OscMessage"/>
+    <classEntry path="com.relivethefuture.osc.core.OscPacket"/>
+  </includeClasses>
+  <includeResources/>
+  <namespaceManifests/>
+</flexLibProperties>

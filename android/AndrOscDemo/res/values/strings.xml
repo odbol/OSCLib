@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Hello World, AndrOscDemo!</string>
+    <string name="app_name">Android OSC Demo</string>
+    <string name="play">Play</string>
+    <string name="stop">Stop</string>
+</resources>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>OSCBox</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>com.adobe.flexbuilder.project.flexbuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>com.adobe.flexbuilder.project.actionscriptnature</nature>
+	</natures>
+	<linkedResources>
+		<link>
+			<name>[source path] HydroTween-src</name>
+			<type>2</type>
+			<locationURI>DOCUMENTS/HydroTween/src</locationURI>
+		</link>
+		<link>
+			<name>[source path] GoBox-src</name>
+			<type>2</type>
+			<locationURI>DOCUMENTS/GoBox/src</locationURI>
+		</link>
+	</linkedResources>
+</projectDescription>

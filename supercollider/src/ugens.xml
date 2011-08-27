@@ -1,0 +1,1475 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ugens>
+<ugen>
+	<name>Line</name>
+	<rates>ar,kr</rates>
+	<arg name='start' default='0.0'/>
+	<arg name='end' default='1.0'/>
+	<arg name='dur' default='1.0'/>
+	<arg name='mul' default='1.0'/>
+	<arg name='add' default='0.0'/>
+	<arg name='doneAction' default='0'/>
+</ugen>
+<ugen>
+	<name>IEnvGen</name>
+	<rates>ar,kr</rates>
+	<arg name='ienvelope'/>
+	<arg name='index'/>
+	<arg name='mul' default='1'/>
+	<arg name='add' default='0'/>
+</ugen>
+<ugen>
+	<name>Logistic</name>
+	<rates>ar,kr</rates>
+	<arg name='chaosParam' default='3.0'/>
+	<arg name='freq' default='1000.0'/>
+	<arg name='init' default='0.5'/>
+	<arg name='mul' default='1.0'/>
+	<arg name='add' default='0.0'/>
+</ugen>
+<ugen>
+	<name>LFSaw</name>
+	<rates>ar,kr</rates>
+	<arg name='freq' default='440.0'/>
+	<arg name='iphase' default='0.0'/>
+	<arg name='mul' default='1.0'/>
+	<arg name='add' default='0.0'/>
+</ugen>
+<ugen>
+	<name>FreeVerb</name>
+	<rates>ar</rates>
+	<arg name='in'/>
+	<arg name='mix' default='0.33'/>
+	<arg name='room' default='0.5'/>
+	<arg name='damp' default='0.5'/>
+	<arg name='mul' default='1.0'/>
+	<arg name='add' default='0.0'/>
+</ugen>
+<ugen>
+	<name>PitchShift</name>
+	<rates>ar</rates>
+	<arg name='in' default='0.0'/>
+	<arg name='windowSize' default='0.2'/>
+	<arg name='pitchRatio' default='1.0'/>
+	<arg name='pitchDispersion' default='0.0'/>
+	<arg name='timeDispersion' default='0.0'/>
+	<arg name='mul' default='1.0'/>
+	<arg name='add' default='0.0'/>
+</ugen>
+<ugen>
+	<name>Compander</name>
+	<rates>ar</rates>
+	<arg name='in' default='0.0'/>
+	<arg name='control' default='0.0'/>
+	<arg name='thresh' default='0.5'/>
+	<arg name='slopeBelow' default='1.0'/>
+	<arg name='slopeAbove' default='1.0'/>
+	<arg name='clampTime' default='0.01'/>
+	<arg name='relaxTime' default='0.1'/>
+	<arg name='mul' default='1.0'/>
+	<arg name='add' default='0.0'/>
+</ugen>
+<ugen>
+	<name>VOsc3</name>
+	<rates>ar,kr</rates>
+	<arg name='bufpos'/>
+	<arg name='freq1' default='110.0'/>
+	<arg name='freq2' default='220.0'/>
+	<arg name='freq3' default='440.0'/>
+	<arg name='mul' default='1.0'/>
+	<arg name='add' default='0.0'/>
+</ugen>
+<ugen>
+	<name>PSinGrain</name>
+	<rates>ar</rates>
+	<arg name='freq' default='440.0'/>
+	<arg name='dur' default='0.2'/>
+	<arg name='amp' default='1.0'/>
+</ugen>
+<ugen>
+	<name>ScopeOut</name>
+	<rates>ar,kr</rates>
+	<arg name='inputArray'/>
+	<arg name='bufnum' default='0'/>
+</ugen>
+<ugen>
+	<name>SinOsc</name>
+	<rates>ar,kr</rates>
+	<arg name='freq' default='440.0'/>
+	<arg name='phase' default='0.0'/>
+	<arg name='mul' default='1.0'/>
+	<arg name='add' default='0.0'/>
+</ugen>
+<ugen>
+	<name>ToggleFF</name>
+	<rates>ar,kr</rates>
+	<arg name='trig' default='0.0'/>
+</ugen>
+<ugen>
+	<name>SinOscFB</name>
+	<rates>ar,kr</rates>
+	<arg name='freq' default='440.0'/>
+	<arg name='feedback' default='0.0'/>
+	<arg name='mul' default='1.0'/>
+	<arg name='add' default='0.0'/>
+</ugen>
+<ugen>
+	<name>Convolution2</name>
+	<rates>ar</rates>
+	<arg name='in'/>
+	<arg name='kernel'/>
+	<arg name='trigger'/>
+	<arg name='framesize' default='0'/>
+	<arg name='mul' default='1.0'/>
+	<arg name='add' default='0.0'/>
+</ugen>
+<ugen>
+	<name>Pulse</name>
+	<rates>ar</rates>
+	<arg name='freq' default='440.0'/>
+	<arg name='width' default='0.5'/>
+	<arg name='mul' default='1.0'/>
+	<arg name='add' default='0.0'/>
+</ugen>
+<ugen>
+	<name>Gendy2</name>
+	<rates>ar,kr</rates>
+	<arg name='ampdist' default='1'/>
+	<arg name='durdist' default='1'/>
+	<arg name='adparam' default='1.0'/>
+	<arg name='ddparam' default='1.0'/>
+	<arg name='minfreq' default='20'/>
+	<arg name='maxfreq' default='1000'/>
+	<arg name='ampscale' default='0.5'/>
+	<arg name='durscale' default='0.5'/>
+	<arg name='initCPs' default='12'/>
+	<arg name='knum'/>
+	<arg name='a' default='1.17'/>
+	<arg name='c' default='0.31'/>
+	<arg name='mul' default='1.0'/>
+	<arg name='add' default='0.0'/>
+</ugen>
+<ugen>
+	<name>PulseCount</name>
+	<rates>ar,kr</rates>
+	<arg name='trig' default='0.0'/>
+	<arg name='reset' default='0.0'/>
+</ugen>
+<ugen>
+	<name>Sweep</name>
+	<rates>ar,kr</rates>
+	<arg name='trig' default='0.0'/>
+	<arg name='rate' default='1.0'/>
+</ugen>
+<ugen>
+	<name>SendTrig</name>
+	<rates>ar,kr</rates>
+	<arg name='in' default='0.0'/>
+	<arg name='id' default='0'/>
+	<arg name='value' default='0.0'/>
+</ugen>
+<ugen>
+	<name>LastValue</name>
+	<rates>ar,kr</rates>
+	<arg name='in' default='0.0'/>
+	<arg name='diff' default='0.01'/>
+</ugen>
+<ugen>
+	<name>FreqShift</name>
+	<rates>ar</rates>
+	<arg name='in'/>
+	<arg name='freq' default='0.0'/>
+	<arg name='phase' default='0.0'/>
+	<arg name='mul' default='1.0'/>
+	<arg name='add' default='0.0'/>
+</ugen>
+<ugen>
+	<name>CoinGate</name>
+	<rates>ar,kr</rates>
+	<arg name='prob'/>
+	<arg name='in'/>
+</ugen>
+<ugen>
+	<name>CompanderD</name>
+	<rates>ar</rates>
+	<arg name='in' default='0.0'/>
+	<arg name='thresh' default='0.5'/>
+	<arg name='slopeBelow' default='1.0'/>
+	<arg name='slopeAbove' default='1.0'/>
+	<arg name='clampTime' default='0.01'/>
+	<arg name='relaxTime' default='0.01'/>
+	<arg name='mul' default='1.0'/>
+	<arg name='add' default='0.0'/>
+</ugen>
+<ugen>
+	<name>CheckBadValues</name>
+	<rates>ar,kr</rates>
+	<arg name='in' default='0.0'/>
+	<arg name='id' default='0'/>
+	<arg name='post' default='2'/>
+</ugen>
+<ugen>
+	<name>Hasher</name>
+	<rates>ar,kr</rates>
+	<arg name='in' default='0.0'/>
+	<arg name='mul' default='1.0'/>
+	<arg name='add' default='0.0'/>
+</ugen>
+<ugen>
+	<name>TExpRand</name>
+	<rates>ar,kr</rates>
+	<arg name='lo' default='0.01'/>
+	<arg name='hi' default='1.0'/>
+	<arg name='trig' default='0.0'/>
+</ugen>
+<ugen>
+	<name>LFPulse</name>
+	<rates>ar,kr</rates>
+	<arg name='freq' default='440.0'/>
+	<arg name='iphase' default='0.0'/>
+	<arg name='width' default='0.5'/>
+	<arg name='mul' default='1.0'/>
+	<arg name='add' default='0.0'/>
+</ugen>
+<ugen>
+	<name>ZeroCrossing</name>
+	<rates>ar,kr</rates>
+	<arg name='in' default='0.0'/>
+</ugen>
+<ugen>
+	<name>VarSaw</name>
+	<rates>ar,kr</rates>
+	<arg name='freq' default='440.0'/>
+	<arg name='iphase' default='0.0'/>
+	<arg name='width' default='0.5'/>
+	<arg name='mul' default='1.0'/>
+	<arg name='add' default='0.0'/>
+</ugen>
+<ugen>
+	<name>DynKlank</name>
+	<rates>ar</rates>
+	<arg name='specificationsArrayRef'/>
+	<arg name='input'/>
+	<arg name='freqscale' default='1.0'/>
+	<arg name='freqoffset' default='0.0'/>
+	<arg name='decayscale' default='1.0'/>
+</ugen>
+<ugen>
+	<name>Pluck</name>
+	<rates>ar</rates>
+	<arg name='in' default='0.0'/>
+	<arg name='trig' default='1.0'/>
+	<arg name='maxdelaytime' default='0.2'/>
+	<arg name='delaytime' default='0.2'/>
+	<arg name='decaytime' default='1.0'/>
+	<arg name='coef' default='0.5'/>
+	<arg name='mul' default='1.0'/>
+	<arg name='add' default='0.0'/>
+</ugen>
+<ugen>
+	<name>LinExp</name>
+	<rates>ar,kr</rates>
+	<arg name='in' default='0.0'/>
+	<arg name='srclo' default='0.0'/>
+	<arg name='srchi' default='1.0'/>
+	<arg name='dstlo' default='1.0'/>
+	<arg name='dsthi' default='2.0'/>
+</ugen>
+<ugen>
+	<name>Latch</name>
+	<rates>ar,kr</rates>
+	<arg name='in' default='0.0'/>
+	<arg name='trig' default='0.0'/>
+</ugen>
+<ugen>
+	<name>Dust2</name>
+	<rates>ar,kr</rates>
+	<arg name='density' default='0.0'/>
+	<arg name='mul' default='1.0'/>
+	<arg name='add' default='0.0'/>
+</ugen>
+<ugen>
+	<name>MantissaMask</name>
+	<rates>ar,kr</rates>
+	<arg name='in' default='0.0'/>
+	<arg name='bits' default='3'/>
+	<arg name='mul' default='1.0'/>
+	<arg name='add' default='0.0'/>
+</ugen>
+<ugen>
+	<name>Dust</name>
+	<rates>ar,kr</rates>
+	<arg name='density' default='0.0'/>
+	<arg name='mul' default='1.0'/>
+	<arg name='add' default='0.0'/>
+</ugen>
+<ugen>
+	<name>Tap</name>
+	<rates>ar</rates>
+	<arg name='bufnum' default='0'/>
+	<arg name='numChannels' default='1'/>
+	<arg name='delaytime' default='0.2'/>
+</ugen>
+<ugen>
+	<name>K2A</name>
+	<rates>ar</rates>
+	<arg name='in' default='0.0'/>
+</ugen>
+<ugen>
+	<name>JScopeOut</name>
+	<rates>ar,kr</rates>
+	<arg name='inputArray'/>
+	<arg name='bufnum' default='0'/>
+	<arg name='run' default='1'/>
+</ugen>
+<ugen>
+	<name>PeakFollower</name>
+	<rates>ar,kr</rates>
+	<arg name='in' default='0.0'/>
+	<arg name='decay' default='0.999'/>
+</ugen>
+<ugen>
+	<name>DegreeToKey</name>
+	<rates>ar,kr</rates>
+	<arg name='bufnum'/>
+	<arg name='in' default='0.0'/>
+	<arg name='octave' default='12.0'/>
+	<arg name='mul' default='1.0'/>
+	<arg name='add' default='0.0'/>
+</ugen>
+<ugen>
+	<name>InRect</name>
+	<rates>ar,kr</rates>
+	<arg name='x' default='0.0'/>
+	<arg name='y' default='0.0'/>
+	<arg name='rect'/>
+</ugen>
+<ugen>
+	<name>AmpComp</name>
+	<rates>ar,kr,ir</rates>
+	<arg name='freq'/>
+	<arg name='root'/>
+	<arg name='exp' default='0.3333'/>
+</ugen>
+<ugen>
+	<name>EnvGen</name>
+	<rates>ar,kr</rates>
+	<arg name='envelope'/>
+	<arg name='gate' default='1.0'/>
+	<arg name='levelScale' default='1.0'/>
+	<arg name='levelBias' default='0.0'/>
+	<arg name='timeScale' default='1.0'/>
+	<arg name='doneAction' default='0'/>
+</ugen>
+<ugen>
+	<name>Select</name>
+	<rates>ar,kr</rates>
+	<arg name='which'/>
+	<arg name='array'/>
+</ugen>
+<ugen>
+	<name>Index</name>
+	<rates>ar,kr</rates>
+	<arg name='bufnum'/>
+	<arg name='in' default='0.0'/>
+	<arg name='mul' default='1.0'/>
+	<arg name='add' default='0.0'/>
+</ugen>
+<ugen>
+	<name>RunningSum</name>
+	<rates>ar,kr</rates>
+	<arg name='in'/>
+	<arg name='numsamp' default='40'/>
+</ugen>
+<ugen>
+	<name>OscN</name>
+	<rates>ar,kr</rates>
+	<arg name='bufnum'/>
+	<arg name='freq' default='440.0'/>
+	<arg name='phase' default='0.0'/>
+	<arg name='mul' default='1.0'/>
+	<arg name='add' default='0.0'/>
+</ugen>
+<ugen>
+	<name>BufWr</name>
+	<rates>ar,kr</rates>
+	<arg name='inputArray'/>
+	<arg name='bufnum' default='0'/>
+	<arg name='phase' default='0.0'/>
+	<arg name='loop' default='1.0'/>
+</ugen>
+<ugen>
+	<name>COsc</name>
+	<rates>ar,kr</rates>
+	<arg name='bufnum'/>
+	<arg name='freq' default='440.0'/>
+	<arg name='beats' default='0.5'/>
+	<arg name='mul' default='1.0'/>
+	<arg name='add' default='0.0'/>
+</ugen>
+<ugen>
+	<name>Duty</name>
+	<rates>ar,kr</rates>
+	<arg name='dur' default='1.0'/>
+	<arg name='reset' default='0.0'/>
+	<arg name='level' default='1.0'/>
+	<arg name='doneAction' default='0'/>
+</ugen>
+<ugen>
+	<name>WhiteNoise</name>
+	<rates>ar,kr</rates>
+	<arg name='mul' default='1.0'/>
+	<arg name='add' default='0.0'/>
+</ugen>
+<ugen>
+	<name>TBall</name>
+	<rates>ar</rates>
+	<arg name='in' default='0.0'/>
+	<arg name='g' default='10'/>
+	<arg name='damp' default='0'/>
+	<arg name='friction' default='0.01'/>
+</ugen>
+<ugen>
+	<name>MostChange</name>
+	<rates>ar,kr</rates>
+	<arg name='a' default='0.0'/>
+	<arg name='b' default='0.0'/>
+</ugen>
+<ugen>
+	<name>LFNoise0</name>
+	<rates>ar,kr</rates>
+	<arg name='freq' default='500.0'/>
+	<arg name='mul' default='1.0'/>
+	<arg name='add' default='0.0'/>
+</ugen>
+<ugen>
+	<name>Gendy3</name>
+	<rates>ar,kr</rates>
+	<arg name='ampdist' default='1'/>
+	<arg name='durdist' default='1'/>
+	<arg name='adparam' default='1.0'/>
+	<arg name='ddparam' default='1.0'/>
+	<arg name='freq' default='440'/>
+	<arg name='ampscale' default='0.5'/>
+	<arg name='durscale' default='0.5'/>
+	<arg name='initCPs' default='12'/>
+	<arg name='knum'/>
+	<arg name='mul' default='1.0'/>
+	<arg name='add' default='0.0'/>
+</ugen>
+<ugen>
+	<name>BufDelayN</name>
+	<rates>ar,kr</rates>
+	<arg name='buf' default='0'/>
+	<arg name='in' default='0.0'/>
+	<arg name='delaytime' default='0.2'/>
+	<arg name='mul' default='1.0'/>
+	<arg name='add' default='0.0'/>
+</ugen>
+<ugen>
+	<name>Crackle</name>
+	<rates>ar,kr</rates>
+	<arg name='chaosParam' default='1.5'/>
+	<arg name='mul' default='1.0'/>
+	<arg name='add' default='0.0'/>
+</ugen>
+<ugen>
+	<name>Spring</name>
+	<rates>ar</rates>
+	<arg name='in' default='0.0'/>
+	<arg name='spring' default='1'/>
+	<arg name='damp' default='0'/>
+</ugen>
+<ugen>
+	<name>Ball</name>
+	<rates>ar</rates>
+	<arg name='in' default='0.0'/>
+	<arg name='g' default='1'/>
+	<arg name='damp' default='0'/>
+	<arg name='friction' default='0.01'/>
+</ugen>
+<ugen>
+	<name>Osc</name>
+	<rates>ar,kr</rates>
+	<arg name='bufnum'/>
+	<arg name='freq' default='440.0'/>
+	<arg name='phase' default='0.0'/>
+	<arg name='mul' default='1.0'/>
+	<arg name='add' default='0.0'/>
+</ugen>
+<ugen>
+	<name>Delay1</name>
+	<rates>ar,kr</rates>
+	<arg name='in' default='0.0'/>
+	<arg name='mul' default='1.0'/>
+	<arg name='add' default='0.0'/>
+</ugen>
+<ugen>
+	<name>HilbertFIR</name>
+	<rates>ar</rates>
+	<arg name='in'/>
+	<arg name='buffer'/>
+</ugen>
+<ugen>
+	<name>XLine</name>
+	<rates>ar,kr</rates>
+	<arg name='start' default='1.0'/>
+	<arg name='end' default='2.0'/>
+	<arg name='dur' default='1.0'/>
+	<arg name='mul' default='1.0'/>
+	<arg name='add' default='0.0'/>
+	<arg name='doneAction' default='0'/>
+</ugen>
+<ugen>
+	<name>Vibrato</name>
+	<rates>ar,kr</rates>
+	<arg name='freq' default='440.0'/>
+	<arg name='rate' default='6'/>
+	<arg name='depth' default='0.02'/>
+	<arg name='delay' default='0.0'/>
+	<arg name='onset' default='0.0'/>
+	<arg name='rateVariation' default='0.04'/>
+	<arg name='depthVariation' default='0.1'/>
+	<arg name='iphase' default='0.0'/>
+</ugen>
+<ugen>
+	<name>Formant</name>
+	<rates>ar</rates>
+	<arg name='fundfreq' default='440.0'/>
+	<arg name='formfreq' default='1760.0'/>
+	<arg name='bwfreq' default='880.0'/>
+	<arg name='mul' default='1.0'/>
+	<arg name='add' default='0.0'/>
+</ugen>
+<ugen>
+	<name>TIRand</name>
+	<rates>ar,kr</rates>
+	<arg name='lo' default='0'/>
+	<arg name='hi' default='127'/>
+	<arg name='trig' default='0.0'/>
+</ugen>
+<ugen>
+	<name>DemandEnvGen</name>
+	<rates>ar,kr</rates>
+	<arg name='level'/>
+	<arg name='dur'/>
+	<arg name='shape' default='1'/>
+	<arg name='curve' default='0'/>
+	<arg name='gate' default='1.0'/>
+	<arg name='reset' default='1.0'/>
+	<arg name='levelScale' default='1.0'/>
+	<arg name='levelBias' default='0.0'/>
+	<arg name='timeScale' default='1.0'/>
+	<arg name='doneAction' default='0'/>
+</ugen>
+<ugen>
+	<name>LinLin</name>
+	<rates>ar,kr</rates>
+	<arg name='in' default='0.0'/>
+	<arg name='srclo' default='0.0'/>
+	<arg name='srchi' default='1.0'/>
+	<arg name='dstlo' default='1.0'/>
+	<arg name='dsthi' default='2.0'/>
+</ugen>
+<ugen>
+	<name>TRand</name>
+	<rates>ar,kr</rates>
+	<arg name='lo' default='0.0'/>
+	<arg name='hi' default='1.0'/>
+	<arg name='trig' default='0.0'/>
+</ugen>
+<ugen>
+	<name>PulseDivider</name>
+	<rates>ar,kr</rates>
+	<arg name='trig' default='0.0'/>
+	<arg name='div' default='2.0'/>
+	<arg name='start' default='0.0'/>
+</ugen>
+<ugen>
+	<name>Klang</name>
+	<rates>ar</rates>
+	<arg name='specificationsArrayRef'/>
+	<arg name='freqscale' default='1.0'/>
+	<arg name='freqoffset' default='0.0'/>
+</ugen>
+<ugen>
+	<name>RecordBuf</name>
+	<rates>ar,kr</rates>
+	<arg name='inputArray'/>
+	<arg name='bufnum' default='0'/>
+	<arg name='offset' default='0.0'/>
+	<arg name='recLevel' default='1.0'/>
+	<arg name='preLevel' default='0.0'/>
+	<arg name='run' default='1.0'/>
+	<arg name='loop' default='1.0'/>
+	<arg name='trigger' default='1.0'/>
+</ugen>
+<ugen>
+	<name>Normalizer</name>
+	<rates>ar</rates>
+	<arg name='in' default='0.0'/>
+	<arg name='level' default='1.0'/>
+	<arg name='dur' default='0.01'/>
+</ugen>
+<ugen>
+	<name>Blip</name>
+	<rates>ar</rates>
+	<arg name='freq' default='440.0'/>
+	<arg name='numharm' default='200.0'/>
+	<arg name='mul' default='1.0'/>
+	<arg name='add' default='0.0'/>
+</ugen>
+<ugen>
+	<name>Gendy1</name>
+	<rates>ar,kr</rates>
+	<arg name='ampdist' default='1'/>
+	<arg name='durdist' default='1'/>
+	<arg name='adparam' default='1.0'/>
+	<arg name='ddparam' default='1.0'/>
+	<arg name='minfreq' default='20'/>
+	<arg name='maxfreq' default='1000'/>
+	<arg name='ampscale' default='0.5'/>
+	<arg name='durscale' default='0.5'/>
+	<arg name='initCPs' default='12'/>
+	<arg name='knum'/>
+	<arg name='mul' default='1.0'/>
+	<arg name='add' default='0.0'/>
+</ugen>
+<ugen>
+	<name>Saw</name>
+	<rates>ar</rates>
+	<arg name='freq' default='440.0'/>
+	<arg name='mul' default='1.0'/>
+	<arg name='add' default='0.0'/>
+</ugen>
+<ugen>
+	<name>Phasor</name>
+	<rates>ar,kr</rates>
+	<arg name='trig' default='0.0'/>
+	<arg name='rate' default='1.0'/>
+	<arg name='start' default='0.0'/>
+	<arg name='end' default='1.0'/>
+	<arg name='resetPos' default='0.0'/>
+</ugen>
+<ugen>
+	<name>DynKlang</name>
+	<rates>ar</rates>
+	<arg name='specificationsArrayRef'/>
+	<arg name='freqscale' default='1.0'/>
+	<arg name='freqoffset' default='0.0'/>
+</ugen>
+<ugen>
+	<name>CombN</name>
+	<rates>ar,kr</rates>
+	<arg name='in' default='0.0'/>
+	<arg name='maxdelaytime' default='0.2'/>
+	<arg name='delaytime' default='0.2'/>
+	<arg name='decaytime' default='1.0'/>
+	<arg name='mul' default='1.0'/>
+	<arg name='add' default='0.0'/>
+</ugen>
+<ugen>
+	<name>Klank</name>
+	<rates>ar</rates>
+	<arg name='specificationsArrayRef'/>
+	<arg name='input'/>
+	<arg name='freqscale' default='1.0'/>
+	<arg name='freqoffset' default='0.0'/>
+	<arg name='decayscale' default='1.0'/>
+</ugen>
+<ugen>
+	<name>VOsc</name>
+	<rates>ar,kr</rates>
+	<arg name='bufpos'/>
+	<arg name='freq' default='440.0'/>
+	<arg name='phase' default='0.0'/>
+	<arg name='mul' default='1.0'/>
+	<arg name='add' default='0.0'/>
+</ugen>
+<ugen>
+	<name>Convolution2L</name>
+	<rates>ar</rates>
+	<arg name='in'/>
+	<arg name='kernel'/>
+	<arg name='trigger'/>
+	<arg name='framesize' default='0'/>
+	<arg name='crossfade' default='1'/>
+	<arg name='mul' default='1.0'/>
+	<arg name='add' default='0.0'/>
+</ugen>
+<ugen>
+	<name>BufCombN</name>
+	<rates>ar</rates>
+	<arg name='buf' default='0'/>
+	<arg name='in' default='0.0'/>
+	<arg name='delaytime' default='0.2'/>
+	<arg name='decaytime' default='1.0'/>
+	<arg name='mul' default='1.0'/>
+	<arg name='add' default='0.0'/>
+</ugen>
+<ugen>
+	<name>Stepper</name>
+	<rates>ar,kr</rates>
+	<arg name='trig' default='0'/>
+	<arg name='reset' default='0'/>
+	<arg name='min' default='0'/>
+	<arg name='max' default='7'/>
+	<arg name='step' default='1'/>
+	<arg name='resetval'/>
+</ugen>
+<ugen>
+	<name>DiskOut</name>
+	<rates>ar</rates>
+	<arg name='bufnum'/>
+	<arg name='channelsArray'/>
+</ugen>
+<ugen>
+	<name>Convolution3</name>
+	<rates>ar,kr</rates>
+	<arg name='in'/>
+	<arg name='kernel'/>
+	<arg name='trigger' default='0'/>
+	<arg name='framesize' default='0'/>
+	<arg name='mul' default='1.0'/>
+	<arg name='add' default='0.0'/>
+</ugen>
+<ugen>
+	<name>InRange</name>
+	<rates>ar,kr</rates>
+	<arg name='in' default='0.0'/>
+	<arg name='lo' default='0.0'/>
+	<arg name='hi' default='1.0'/>
+</ugen>
+<ugen>
+	<name>Trig1</name>
+	<rates>ar,kr</rates>
+	<arg name='in' default='0.0'/>
+	<arg name='dur' default='0.1'/>
+</ugen>
+<ugen>
+	<name>FSinOsc</name>
+	<rates>ar,kr</rates>
+	<arg name='freq' default='440.0'/>
+	<arg name='iphase' default='0.0'/>
+	<arg name='mul' default='1.0'/>
+	<arg name='add' default='0.0'/>
+</ugen>
+<ugen>
+	<name>Convolution</name>
+	<rates>ar</rates>
+	<arg name='in'/>
+	<arg name='kernel'/>
+	<arg name='framesize' default='512'/>
+	<arg name='mul' default='1.0'/>
+	<arg name='add' default='0.0'/>
+</ugen>
+<ugen>
+	<name>Amplitude</name>
+	<rates>ar,kr</rates>
+	<arg name='in' default='0.0'/>
+	<arg name='attackTime' default='0.01'/>
+	<arg name='releaseTime' default='0.01'/>
+	<arg name='mul' default='1.0'/>
+	<arg name='add' default='0.0'/>
+</ugen>
+<ugen>
+	<name>Timer</name>
+	<rates>ar,kr</rates>
+	<arg name='trig' default='0.0'/>
+</ugen>
+<ugen>
+	<name>DelayN</name>
+	<rates>ar,kr</rates>
+	<arg name='in' default='0.0'/>
+	<arg name='maxdelaytime' default='0.2'/>
+	<arg name='delaytime' default='0.2'/>
+	<arg name='mul' default='1.0'/>
+	<arg name='add' default='0.0'/>
+</ugen>
+<ugen>
+	<name>Impulse</name>
+	<rates>ar,kr</rates>
+	<arg name='freq' default='440.0'/>
+	<arg name='phase' default='0.0'/>
+	<arg name='mul' default='1.0'/>
+	<arg name='add' default='0.0'/>
+</ugen>
+<ugen>
+	<name>TWChoose</name>
+	<rates>ar,kr</rates>
+	<arg name='trig'/>
+	<arg name='array'/>
+	<arg name='weights'/>
+	<arg name='normalize' default='0'/>
+</ugen>
+<ugen>
+	<name>Poll</name>
+	<rates>ar,kr</rates>
+	<arg name='trig'/>
+	<arg name='in'/>
+	<arg name='label'/>
+	<arg name='trigid' default='-1'/>
+</ugen>
+<ugen>
+	<name>SyncSaw</name>
+	<rates>ar,kr</rates>
+	<arg name='syncFreq' default='440.0'/>
+	<arg name='sawFreq' default='440.0'/>
+	<arg name='mul' default='1.0'/>
+	<arg name='add' default='0.0'/>
+</ugen>
+<ugen>
+	<name>TWindex</name>
+	<rates>ar,kr</rates>
+	<arg name='in'/>
+	<arg name='array'/>
+	<arg name='normalize' default='0'/>
+</ugen>
+<ugen>
+	<name>LocalOut</name>
+	<rates>ar,kr</rates>
+	<arg name='channelsArray'/>
+</ugen>
+<ugen>
+	<name>XOut</name>
+	<rates>ar,kr</rates>
+	<arg name='bus'/>
+	<arg name='xfade'/>
+	<arg name='channelsArray'/>
+</ugen>
+<ugen>
+	<name>Out</name>
+	<rates>ar,kr</rates>
+	<arg name='bus'/>
+	<arg name='channelsArray'/>
+</ugen>
+<ugen>
+	<name>XFade2</name>
+	<rates>ar,kr</rates>
+	<arg name='inA'/>
+	<arg name='inB' default='0.0'/>
+	<arg name='pan' default='0.0'/>
+	<arg name='level' default='1.0'/>
+</ugen>
+<ugen>
+	<name>LinXFade2</name>
+	<rates>ar,kr</rates>
+	<arg name='inA'/>
+	<arg name='inB' default='0.0'/>
+	<arg name='pan' default='0.0'/>
+	<arg name='level' default='1.0'/>
+</ugen>
+<ugen>
+	<name>T2A</name>
+	<rates>ar</rates>
+	<arg name='in' default='0.0'/>
+	<arg name='offset' default='0'/>
+</ugen>
+<ugen>
+	<name>AmpCompA</name>
+	<rates>ar,kr,ir</rates>
+	<arg name='freq' default='1000'/>
+	<arg name='root' default='0'/>
+	<arg name='minAmp' default='0.32'/>
+	<arg name='rootAmp' default='1.0'/>
+</ugen>
+<ugen>
+	<name>TDuty</name>
+	<rates>ar,kr</rates>
+	<arg name='dur' default='1.0'/>
+	<arg name='reset' default='0.0'/>
+	<arg name='level' default='1.0'/>
+	<arg name='doneAction' default='0'/>
+	<arg name='gapFirst' default='0'/>
+</ugen>
+<ugen>
+	<name>BPF</name>
+	<rates>ar,kr</rates>
+	<arg name='in' default='0.0'/>
+	<arg name='freq' default='440.0'/>
+	<arg name='rq' default='1.0'/>
+	<arg name='mul' default='1.0'/>
+	<arg name='add' default='0.0'/>
+</ugen>
+<ugen>
+	<name>LPF</name>
+	<rates>ar,kr</rates>
+	<arg name='in' default='0.0'/>
+	<arg name='freq' default='440.0'/>
+	<arg name='mul' default='1.0'/>
+	<arg name='add' default='0.0'/>
+</ugen>
+<ugen>
+	<name>LPZ2</name>
+	<rates>ar,kr</rates>
+	<arg name='in' default='0.0'/>
+	<arg name='mul' default='1.0'/>
+	<arg name='add' default='0.0'/>
+</ugen>
+<ugen>
+	<name>LagUD</name>
+	<rates>ar,kr</rates>
+	<arg name='in' default='0.0'/>
+	<arg name='lagTimeU' default='0.1'/>
+	<arg name='lagTimeD' default='0.1'/>
+	<arg name='mul' default='1.0'/>
+	<arg name='add' default='0.0'/>
+</ugen>
+<ugen>
+	<name>Decay2</name>
+	<rates>ar,kr</rates>
+	<arg name='in' default='0.0'/>
+	<arg name='attackTime' default='0.01'/>
+	<arg name='decayTime' default='1.0'/>
+	<arg name='mul' default='1.0'/>
+	<arg name='add' default='0.0'/>
+</ugen>
+<ugen>
+	<name>Decay</name>
+	<rates>ar,kr</rates>
+	<arg name='in' default='0.0'/>
+	<arg name='decayTime' default='1.0'/>
+	<arg name='mul' default='1.0'/>
+	<arg name='add' default='0.0'/>
+</ugen>
+<ugen>
+	<name>OnePole</name>
+	<rates>ar,kr</rates>
+	<arg name='in' default='0.0'/>
+	<arg name='coef' default='0.5'/>
+	<arg name='mul' default='1.0'/>
+	<arg name='add' default='0.0'/>
+</ugen>
+<ugen>
+	<name>Resonz</name>
+	<rates>ar,kr</rates>
+	<arg name='in' default='0.0'/>
+	<arg name='freq' default='440.0'/>
+	<arg name='bwr' default='1.0'/>
+	<arg name='mul' default='1.0'/>
+	<arg name='add' default='0.0'/>
+</ugen>
+<ugen>
+	<name>MoogFF</name>
+	<rates>ar,kr</rates>
+	<arg name='in'/>
+	<arg name='freq' default='100'/>
+	<arg name='gain' default='2'/>
+	<arg name='reset' default='0'/>
+	<arg name='mul' default='1'/>
+	<arg name='add' default='0'/>
+</ugen>
+<ugen>
+	<name>Median</name>
+	<rates>ar,kr</rates>
+	<arg name='length' default='3'/>
+	<arg name='in' default='0.0'/>
+	<arg name='mul' default='1.0'/>
+	<arg name='add' default='0.0'/>
+</ugen>
+<ugen>
+	<name>Integrator</name>
+	<rates>ar,kr</rates>
+	<arg name='in' default='0.0'/>
+	<arg name='coef' default='1.0'/>
+	<arg name='mul' default='1.0'/>
+	<arg name='add' default='0.0'/>
+</ugen>
+<ugen>
+	<name>DetectSilence</name>
+	<rates>ar,kr</rates>
+	<arg name='in' default='0.0'/>
+	<arg name='amp' default='0.0001'/>
+	<arg name='time' default='0.1'/>
+	<arg name='doneAction' default='0'/>
+</ugen>
+<ugen>
+	<name>Lag</name>
+	<rates>ar,kr</rates>
+	<arg name='in' default='0.0'/>
+	<arg name='lagTime' default='0.1'/>
+	<arg name='mul' default='1.0'/>
+	<arg name='add' default='0.0'/>
+</ugen>
+<ugen>
+	<name>LPZ1</name>
+	<rates>ar,kr</rates>
+	<arg name='in' default='0.0'/>
+	<arg name='mul' default='1.0'/>
+	<arg name='add' default='0.0'/>
+</ugen>
+<ugen>
+	<name>Ringz</name>
+	<rates>ar,kr</rates>
+	<arg name='in' default='0.0'/>
+	<arg name='freq' default='440.0'/>
+	<arg name='decaytime' default='1.0'/>
+	<arg name='mul' default='1.0'/>
+	<arg name='add' default='0.0'/>
+</ugen>
+<ugen>
+	<name>FOS</name>
+	<rates>ar,kr</rates>
+	<arg name='in' default='0.0'/>
+	<arg name='a0' default='0.0'/>
+	<arg name='a1' default='0.0'/>
+	<arg name='b1' default='0.0'/>
+	<arg name='mul' default='1.0'/>
+	<arg name='add' default='0.0'/>
+</ugen>
+<ugen>
+	<name>RLPF</name>
+	<rates>ar,kr</rates>
+	<arg name='in' default='0.0'/>
+	<arg name='freq' default='440.0'/>
+	<arg name='rq' default='1.0'/>
+	<arg name='mul' default='1.0'/>
+	<arg name='add' default='0.0'/>
+</ugen>
+<ugen>
+	<name>MidEQ</name>
+	<rates>ar,kr</rates>
+	<arg name='in' default='0.0'/>
+	<arg name='freq' default='440.0'/>
+	<arg name='rq' default='1.0'/>
+	<arg name='db' default='0.0'/>
+	<arg name='mul' default='1.0'/>
+	<arg name='add' default='0.0'/>
+</ugen>
+<ugen>
+	<name>Slew</name>
+	<rates>ar,kr</rates>
+	<arg name='in' default='0.0'/>
+	<arg name='up' default='1.0'/>
+	<arg name='dn' default='1.0'/>
+	<arg name='mul' default='1.0'/>
+	<arg name='add' default='0.0'/>
+</ugen>
+<ugen>
+	<name>LeakDC</name>
+	<rates>ar,kr</rates>
+	<arg name='in' default='0.0'/>
+	<arg name='coef' default='0.9'/>
+	<arg name='mul' default='1.0'/>
+	<arg name='add' default='0.0'/>
+</ugen>
+<ugen>
+	<name>TwoPole</name>
+	<rates>ar,kr</rates>
+	<arg name='in' default='0.0'/>
+	<arg name='freq' default='440.0'/>
+	<arg name='radius' default='0.8'/>
+	<arg name='mul' default='1.0'/>
+	<arg name='add' default='0.0'/>
+</ugen>
+<ugen>
+	<name>Slope</name>
+	<rates>ar,kr</rates>
+	<arg name='in' default='0.0'/>
+	<arg name='mul' default='1.0'/>
+	<arg name='add' default='0.0'/>
+</ugen>
+<ugen>
+	<name>Formlet</name>
+	<rates>ar,kr</rates>
+	<arg name='in' default='0.0'/>
+	<arg name='freq' default='440.0'/>
+	<arg name='attacktime' default='1.0'/>
+	<arg name='decaytime' default='1.0'/>
+	<arg name='mul' default='1.0'/>
+	<arg name='add' default='0.0'/>
+</ugen>
+<ugen>
+	<name>SOS</name>
+	<rates>ar,kr</rates>
+	<arg name='in' default='0.0'/>
+	<arg name='a0' default='0.0'/>
+	<arg name='a1' default='0.0'/>
+	<arg name='a2' default='0.0'/>
+	<arg name='b1' default='0.0'/>
+	<arg name='b2' default='0.0'/>
+	<arg name='mul' default='1.0'/>
+	<arg name='add' default='0.0'/>
+</ugen>
+<ugen>
+	<name>PV_JensenAndersen</name>
+	<rates>ar</rates>
+	<arg name='buffer'/>
+	<arg name='propsc' default='0.25'/>
+	<arg name='prophfe' default='0.25'/>
+	<arg name='prophfc' default='0.25'/>
+	<arg name='propsf' default='0.25'/>
+	<arg name='threshold' default='1.0'/>
+	<arg name='waittime' default='0.04'/>
+</ugen>
+<ugen>
+	<name>PV_HainsworthFoote</name>
+	<rates>ar</rates>
+	<arg name='buffer'/>
+	<arg name='proph' default='0.0'/>
+	<arg name='propf' default='0.0'/>
+	<arg name='threshold' default='1.0'/>
+	<arg name='waittime' default='0.04'/>
+</ugen>
+<ugen>
+	<name>GrainIn</name>
+	<rates>ar</rates>
+	<arg name='numChannels' default='1'/>
+	<arg name='trigger' default='0'/>
+	<arg name='dur' default='1'/>
+	<arg name='in'/>
+	<arg name='pan' default='0'/>
+	<arg name='envbufnum' default='-1'/>
+	<arg name='mul' default='1'/>
+	<arg name='add' default='0'/>
+</ugen>
+<ugen>
+	<name>Demand</name>
+	<rates>ar,kr</rates>
+	<arg name='trig'/>
+	<arg name='reset'/>
+	<arg name='demandUGens'/>
+</ugen>
+<ugen>
+	<name>Warp1</name>
+	<rates>ar</rates>
+	<arg name='numChannels' default='1'/>
+	<arg name='bufnum' default='0'/>
+	<arg name='pointer' default='0'/>
+	<arg name='freqScale' default='1'/>
+	<arg name='windowSize' default='0.2'/>
+	<arg name='envbufnum' default='-1'/>
+	<arg name='overlaps' default='8'/>
+	<arg name='windowRandRatio' default='0.0'/>
+	<arg name='interp' default='1'/>
+	<arg name='mul' default='1'/>
+	<arg name='add' default='0'/>
+</ugen>
+<ugen>
+	<name>GrainSin</name>
+	<rates>ar</rates>
+	<arg name='numChannels' default='1'/>
+	<arg name='trigger' default='0'/>
+	<arg name='dur' default='1'/>
+	<arg name='freq' default='440'/>
+	<arg name='pan' default='0'/>
+	<arg name='envbufnum' default='-1'/>
+	<arg name='mul' default='1'/>
+	<arg name='add' default='0'/>
+</ugen>
+<ugen>
+	<name>PlayBuf</name>
+	<rates>ar,kr</rates>
+	<arg name='numChannels'/>
+	<arg name='bufnum' default='0'/>
+	<arg name='rate' default='1.0'/>
+	<arg name='trigger' default='1.0'/>
+	<arg name='startPos' default='0.0'/>
+	<arg name='loop' default='0.0'/>
+</ugen>
+<ugen>
+	<name>FreeVerb2</name>
+	<rates>ar</rates>
+	<arg name='in'/>
+	<arg name='in2'/>
+	<arg name='mix' default='0.33'/>
+	<arg name='room' default='0.5'/>
+	<arg name='damp' default='0.5'/>
+	<arg name='mul' default='1.0'/>
+	<arg name='add' default='0.0'/>
+</ugen>
+<ugen>
+	<name>GrainFM</name>
+	<rates>ar</rates>
+	<arg name='numChannels' default='1'/>
+	<arg name='trigger' default='0'/>
+	<arg name='dur' default='1'/>
+	<arg name='carfreq' default='440'/>
+	<arg name='modfreq' default='200'/>
+	<arg name='index' default='1'/>
+	<arg name='pan' default='0'/>
+	<arg name='envbufnum' default='-1'/>
+	<arg name='mul' default='1'/>
+	<arg name='add' default='0'/>
+</ugen>
+<ugen>
+	<name>TGrains</name>
+	<rates>ar</rates>
+	<arg name='numChannels'/>
+	<arg name='trigger' default='0'/>
+	<arg name='bufnum' default='0'/>
+	<arg name='rate' default='1'/>
+	<arg name='centerPos' default='0'/>
+	<arg name='dur' default='0.1'/>
+	<arg name='pan' default='0'/>
+	<arg name='amp' default='0.1'/>
+	<arg name='interp' default='4'/>
+</ugen>
+<ugen>
+	<name>Hilbert</name>
+	<rates>ar</rates>
+	<arg name='in'/>
+	<arg name='mul' default='1'/>
+	<arg name='add' default='0'/>
+</ugen>
+<ugen>
+	<name>StereoConvolution2L</name>
+	<rates>ar</rates>
+	<arg name='in'/>
+	<arg name='kernelL'/>
+	<arg name='kernelR'/>
+	<arg name='trigger'/>
+	<arg name='framesize' default='0'/>
+	<arg name='crossfade' default='1'/>
+	<arg name='mul' default='1.0'/>
+	<arg name='add' default='0.0'/>
+</ugen>
+<ugen>
+	<name>DC</name>
+	<rates>ar,kr</rates>
+	<arg name='in' default='0.0'/>
+</ugen>
+<ugen>
+	<name>DiskIn</name>
+	<rates>ar</rates>
+	<arg name='numChannels'/>
+	<arg name='bufnum'/>
+	<arg name='loop' default='0'/>
+</ugen>
+<ugen>
+	<name>GrainBuf</name>
+	<rates>ar</rates>
+	<arg name='numChannels' default='1'/>
+	<arg name='trigger' default='0'/>
+	<arg name='dur' default='1'/>
+	<arg name='sndbuf'/>
+	<arg name='rate' default='1'/>
+	<arg name='pos' default='0'/>
+	<arg name='interp' default='2'/>
+	<arg name='pan' default='0'/>
+	<arg name='envbufnum' default='-1'/>
+	<arg name='mul' default='1'/>
+	<arg name='add' default='0'/>
+</ugen>
+<ugen>
+	<name>BufRd</name>
+	<rates>ar,kr</rates>
+	<arg name='numChannels'/>
+	<arg name='bufnum' default='0'/>
+	<arg name='phase' default='0.0'/>
+	<arg name='loop' default='1.0'/>
+	<arg name='interpolation' default='2'/>
+</ugen>
+<ugen>
+	<name>GVerb</name>
+	<rates>ar</rates>
+	<arg name='in'/>
+	<arg name='roomsize' default='10'/>
+	<arg name='revtime' default='3'/>
+	<arg name='damping' default='0.5'/>
+	<arg name='inputbw' default='0.5'/>
+	<arg name='spread' default='15'/>
+	<arg name='drylevel' default='1'/>
+	<arg name='earlyreflevel' default='0.7'/>
+	<arg name='taillevel' default='0.5'/>
+	<arg name='maxroomsize' default='300'/>
+	<arg name='mul' default='1'/>
+	<arg name='add' default='0'/>
+</ugen>
+<ugen>
+	<name>Silent</name>
+	<rates>ar</rates>
+	<arg name='numChannels' default='1'/>
+</ugen>
+<ugen>
+	<name>Rotate2</name>
+	<rates>ar,kr</rates>
+	<arg name='x'/>
+	<arg name='y'/>
+	<arg name='pos' default='0.0'/>
+</ugen>
+<ugen>
+	<name>DecodeB2</name>
+	<rates>ar,kr</rates>
+	<arg name='numChans'/>
+	<arg name='w'/>
+	<arg name='x'/>
+	<arg name='y'/>
+	<arg name='orientation' default='0.5'/>
+</ugen>
+<ugen>
+	<name>Pan4</name>
+	<rates>ar,kr</rates>
+	<arg name='in'/>
+	<arg name='xpos' default='0.0'/>
+	<arg name='ypos' default='0.0'/>
+	<arg name='level' default='1.0'/>
+</ugen>
+<ugen>
+	<name>PanAz</name>
+	<rates>ar,kr</rates>
+	<arg name='numChans'/>
+	<arg name='in'/>
+	<arg name='pos' default='0.0'/>
+	<arg name='level' default='1.0'/>
+	<arg name='width' default='2.0'/>
+	<arg name='orientation' default='0.5'/>
+</ugen>
+<ugen>
+	<name>Balance2</name>
+	<rates>ar,kr</rates>
+	<arg name='left'/>
+	<arg name='right'/>
+	<arg name='pos' default='0.0'/>
+	<arg name='level' default='1.0'/>
+</ugen>
+<ugen>
+	<name>PanB2</name>
+	<rates>ar,kr</rates>
+	<arg name='in'/>
+	<arg name='azimuth' default='0'/>
+	<arg name='gain' default='1'/>
+</ugen>
+<ugen>
+	<name>PanB</name>
+	<rates>ar,kr</rates>
+	<arg name='in'/>
+	<arg name='azimuth' default='0'/>
+	<arg name='elevation' default='0'/>
+	<arg name='gain' default='1'/>
+</ugen>
+<ugen>
+	<name>Pan2</name>
+	<rates>ar,kr</rates>
+	<arg name='in'/>
+	<arg name='pos' default='0.0'/>
+	<arg name='level' default='1.0'/>
+</ugen>
+<ugen>
+	<name>BiPanB2</name>
+	<rates>ar,kr</rates>
+	<arg name='inA'/>
+	<arg name='inB'/>
+	<arg name='azimuth'/>
+	<arg name='gain' default='1'/>
+</ugen>
+<ugen>
+	<name>LocalIn</name>
+	<rates>ar,kr</rates>
+	<arg name='numChannels' default='1'/>
+</ugen>
+<ugen>
+	<name>InFeedback</name>
+	<rates>ar</rates>
+	<arg name='bus' default='0'/>
+	<arg name='numChannels' default='1'/>
+</ugen>
+<ugen>
+	<name>In</name>
+	<rates>ar,kr</rates>
+	<arg name='bus' default='0'/>
+	<arg name='numChannels' default='1'/>
+</ugen>
+<ugen>
+	<name>FBSineN</name>
+	<rates>ar</rates>
+	<arg name='freq' default='22050'/>
+	<arg name='im' default='1'/>
+	<arg name='fb' default='0.1'/>
+	<arg name='a' default='1.1'/>
+	<arg name='c' default='0.5'/>
+	<arg name='xi' default='0.1'/>
+	<arg name='yi' default='0.1'/>
+	<arg name='mul' default='1'/>
+	<arg name='add' default='0'/>
+</ugen>
+<ugen>
+	<name>LatoocarfianN</name>
+	<rates>ar</rates>
+	<arg name='freq' default='22050'/>
+	<arg name='a' default='1'/>
+	<arg name='b' default='3'/>
+	<arg name='c' default='0.5'/>
+	<arg name='d' default='0.5'/>
+	<arg name='xi' default='0.5'/>
+	<arg name='yi' default='0.5'/>
+	<arg name='mul' default='1.0'/>
+	<arg name='add' default='0.0'/>
+</ugen>
+<ugen>
+	<name>QuadN</name>
+	<rates>ar</rates>
+	<arg name='freq' default='22050'/>
+	<arg name='a' default='1'/>
+	<arg name='b' default='-1'/>
+	<arg name='c' default='-0.75'/>
+	<arg name='xi' default='0'/>
+	<arg name='mul' default='1'/>
+	<arg name='add' default='0'/>
+</ugen>
+<ugen>
+	<name>HenonN</name>
+	<rates>ar</rates>
+	<arg name='freq' default='22050'/>
+	<arg name='a' default='1.4'/>
+	<arg name='b' default='0.3'/>
+	<arg name='x0' default='0'/>
+	<arg name='x1' default='0'/>
+	<arg name='mul' default='1.0'/>
+	<arg name='add' default='0.0'/>
+</ugen>
+<ugen>
+	<name>LinCongN</name>
+	<rates>ar</rates>
+	<arg name='freq' default='22050'/>
+	<arg name='a' default='1.1'/>
+	<arg name='c' default='0.13'/>
+	<arg name='m' default='1.0'/>
+	<arg name='xi' default='0'/>
+	<arg name='mul' default='1.0'/>
+	<arg name='add' default='0.0'/>
+</ugen>
+<ugen>
+	<name>LorenzL</name>
+	<rates>ar</rates>
+	<arg name='freq' default='22050'/>
+	<arg name='s' default='10'/>
+	<arg name='r' default='28'/>
+	<arg name='b' default='2.667'/>
+	<arg name='h' default='0.05'/>
+	<arg name='xi' default='0.1'/>
+	<arg name='yi' default='0'/>
+	<arg name='zi' default='0'/>
+	<arg name='mul' default='1.0'/>
+	<arg name='add' default='0.0'/>
+</ugen>
+<ugen>
+	<name>StandardN</name>
+	<rates>ar</rates>
+	<arg name='freq' default='22050'/>
+	<arg name='k' default='1.0'/>
+	<arg name='xi' default='0.5'/>
+	<arg name='yi' default='0'/>
+	<arg name='mul' default='1.0'/>
+	<arg name='add' default='0.0'/>
+</ugen>
+<ugen>
+	<name>GbmanN</name>
+	<rates>ar</rates>
+	<arg name='freq' default='22050'/>
+	<arg name='xi' default='1.2'/>
+	<arg name='yi' default='2.1'/>
+	<arg name='mul' default='1'/>
+	<arg name='add' default='0'/>
+</ugen>
+<ugen>
+	<name>CuspN</name>
+	<rates>ar</rates>
+	<arg name='freq' default='22050'/>
+	<arg name='a' default='1'/>
+	<arg name='b' default='1.9'/>
+	<arg name='xi' default='0'/>
+	<arg name='mul' default='1'/>
+	<arg name='add' default='0'/>
+</ugen>
+</ugens>
