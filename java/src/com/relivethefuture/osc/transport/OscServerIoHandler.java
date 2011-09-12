@@ -26,12 +26,18 @@ import java.util.Iterator;
 
 import org.apache.mina.core.service.IoHandlerAdapter;
 import org.apache.mina.core.session.IoSession;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import com.relivethefuture.osc.data.OscBundle;
 import com.relivethefuture.osc.data.OscListener;
 import com.relivethefuture.osc.data.OscMessage;
 
+
 public class OscServerIoHandler extends IoHandlerAdapter {
+
+	final Logger logger = LoggerFactory.getLogger(OscServerIoHandler.class);
+	
 	public static final String INDEX_KEY = OscServerIoHandler.class.getName()
 			+ ".INDEX";
 	private ArrayList<OscListener> listeners;
@@ -57,6 +63,9 @@ public class OscServerIoHandler extends IoHandlerAdapter {
 	public void exceptionCaught(IoSession session, Throwable cause)
 			throws Exception {
 		// SessionLog.warn(session, cause.getMessage(), cause);
+		//Log.e(TAG, "Error handling OSC server IO.", cause);
+
+		logger.error("Error handling OSC server IO.", cause);
 	}
 
 	public void messageReceived(IoSession session, Object message)

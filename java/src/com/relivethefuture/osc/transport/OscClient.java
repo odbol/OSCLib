@@ -35,6 +35,7 @@ import org.apache.mina.core.service.IoConnector;
 import org.apache.mina.core.service.IoHandlerAdapter;
 import org.apache.mina.core.session.IdleStatus;
 import org.apache.mina.core.session.IoSession;
+import org.apache.mina.core.write.WriteToClosedSessionException;
 import org.apache.mina.transport.socket.nio.NioDatagramConnector;
 import org.apache.mina.transport.socket.nio.NioSocketConnector;
 import org.slf4j.Logger;
@@ -68,7 +69,7 @@ public class OscClient extends IoHandlerAdapter implements
 	final Logger logger = LoggerFactory.getLogger(OscClient.class);
 
 	private IoConnector connector;
-	private IoSession session;
+	private volatile IoSession session;
 	private List<OscPacket> packetQueue;
 	private OscDataEncoder encoder;
 
@@ -123,7 +124,7 @@ public class OscClient extends IoHandlerAdapter implements
 				}
 			}
 		} else {
-			System.out.println("Not connected...exiting");
+			logger.debug("Not connected...exiting");
 		}
 	}
 
@@ -169,13 +170,24 @@ public class OscClient extends IoHandlerAdapter implements
 					+ " : " + address.getPort());
 			
 			attemptReconnect();
-		} else {
+		}
+		else if (arg1 instanceof WriteToClosedSessionException) {
+			logger.warn("Tried to write to closed sessson " + arg1.toString());
+			
+			//don't reconnect if the session has ended after being started correctly!
+			//attemptReconnect();
+		}
+		else {
 			arg1.printStackTrace();
 		}
 	}
 
 	private void attemptReconnect() {
-		if (++curConnectionAttempt < CONNECTION_ATTEMPTS) {
+		//TODO: disable session until we get a new one
+		//does this need to be synchronized????
+		//session = null;
+		
+		if (++curConnectionAttempt < CONNECTION_ATTEMPTS) {		
 			logger.warn("Attempting to reconnect in " + (CONNECTION_RETRY_DELAY / 1000) + " seconds.");
 			
 			//TODO: unregister future listener!
